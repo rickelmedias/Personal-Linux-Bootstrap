@@ -354,10 +354,10 @@ Finalmente, instale as bibliotecas a partir dos arquivos .whl:
 
 ```bash
 python -m pip install \
-  ./torch-2.5.1+rocm7.0.2.git07354c51-cp310-cp310-linux_x86_64.whl \
-  ./torchvision-0.22.1+rocm7.0.2.git59a3e1f9-cp310-cp310-linux_x86_64.whl \
-  ./torchaudio-2.7.1+rocm7.0.2.git95c61b41-cp310-cp310-linux_x86_64.whl \ 
-  ./triton-3.1.0+rocm7.0.2.git1e26fcf7-cp310-cp310-linux_x86_64.whl
+    ./torch-2.5.1+rocm7.0.2.git07354c51-cp310-cp310-linux_x86_64.whl \
+    ./torchvision-0.22.1+rocm7.0.2.git59a3e1f9-cp310-cp310-linux_x86_64.whl \
+    ./torchaudio-2.7.1+rocm7.0.2.git95c61b41-cp310-cp310-linux_x86_64.whl \
+    ./triton-3.1.0+rocm7.0.2.git1e26fcf7-cp310-cp310-linux_x86_64.whl
 ```
 
 ### 5.4. Verificar Instalação do PyTorch
