@@ -337,7 +337,7 @@ conda activate rocm-env
 Crie um diretório para os pacotes e faça o download dos arquivos .whl:
 
 ```bash
-cd ~/rocm-wheels
+mkdir ~/rocm-wheels ~/rocm-wheels/310 && cd ~/rocm-wheels/310
 
 wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torch-2.5.1%2Brocm7.0.2.git07354c51-cp310-cp310-linux_x86_64.whl
 wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchvision-0.22.1%2Brocm7.0.2.git59a3e1f9-cp310-cp310-linux_x86_64.whl
@@ -358,6 +358,32 @@ python -m pip install \
     ./torchvision-0.22.1+rocm7.0.2.git59a3e1f9-cp310-cp310-linux_x86_64.whl \
     ./torchaudio-2.7.1+rocm7.0.2.git95c61b41-cp310-cp310-linux_x86_64.whl \
     ./triton-3.1.0+rocm7.0.2.git1e26fcf7-cp310-cp310-linux_x86_64.whl
+```
+
+#### 5.3.1. Instalar PyTorch para ROCm no Python 3.11
+
+Algumas bibliotecas como a Ultralytics para o YoloV5 podem apresentar conflito nas configurações acima (Python 3.10), esses conflitos podem ser resolvidos com a atualização dos pacotes e versões, para isso vamos criar também um ambiente para o Python 3.11.
+
+```bash
+conda create -n rocm-env-311 python=3.11
+conda activate rocm-env-311
+```
+
+Crie um diretório para os pacotes e faça o download dos arquivos .whl:
+
+```bash
+mkdir ~/rocm-wheels/311 && cd ~/rocm-wheels/311
+
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torch-2.7.1%2Brocm7.0.2.git9015dfdf-cp311-cp311-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchvision-0.23.0%2Brocm7.0.2.git824e8c87-cp311-cp311-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchaudio-2.7.1%2Brocm7.0.2.git95c61b41-cp311-cp311-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/triton-3.3.1%2Brocm7.0.2.git9c7bc0a3-cp311-cp311-linux_x86_64.whl
+```
+
+E agora dentro dessa pasta com os _wheels_ instale no ambiente _conda_:
+
+```bash
+pip install torch-2.7.1*.whl torchvision-0.23.0*.whl torchaudio-2.7.1*.whl triton-3.3.1*.whl
 ```
 
 ### 5.4. Verificar Instalação do PyTorch
