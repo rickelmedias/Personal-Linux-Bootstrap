@@ -1,5 +1,7 @@
 # Configuração do Ubuntu 24.04 para Desenvolvimento
 
+![Logo para o repositório](https://github.com/user-attachments/assets/5804f96f-5464-48a7-960f-24c568a94bb5)
+
 Este documento é um guia para configurar um ambiente de desenvolvimento no Ubuntu 24.04, incluindo ferramentas essenciais, Docker, Conda e drivers AMD (ROCm) para PyTorch.
 
 ## 1. Atualização do Sistema e Pacotes Essenciais
