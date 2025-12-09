@@ -164,10 +164,10 @@ sudo usermod -a -G render,video $LOGNAME
 conda create -n rocm-env python=3.10 && conda activate rocm-env
 mkdir -p ~/rocm-wheels/310 && cd ~/rocm-wheels/310
 
-wget [https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torch-2.5.1%2Brocm7.0.2.git07354c51-cp310-cp310-linux_x86_64.whl](https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torch-2.5.1%2Brocm7.0.2.git07354c51-cp310-cp310-linux_x86_64.whl)
-wget [https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchvision-0.22.1%2Brocm7.0.2.git59a3e1f9-cp310-cp310-linux_x86_64.whl](https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchvision-0.22.1%2Brocm7.0.2.git59a3e1f9-cp310-cp310-linux_x86_64.whl)
-wget [https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchaudio-2.7.1%2Brocm7.0.2.git95c61b41-cp310-cp310-linux_x86_64.whl](https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchaudio-2.7.1%2Brocm7.0.2.git95c61b41-cp310-cp310-linux_x86_64.whl)
-wget [https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/triton-3.1.0%2Brocm7.0.2.git1e26fcf7-cp310-cp310-linux_x86_64.whl](https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/triton-3.1.0%2Brocm7.0.2.git1e26fcf7-cp310-cp310-linux_x86_64.whl)
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torch-2.5.1%2Brocm7.0.2.git07354c51-cp310-cp310-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchvision-0.22.1%2Brocm7.0.2.git59a3e1f9-cp310-cp310-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchaudio-2.7.1%2Brocm7.0.2.git95c61b41-cp310-cp310-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/triton-3.1.0%2Brocm7.0.2.git1e26fcf7-cp310-cp310-linux_x86_64.whl
 
 pip uninstall -y torch torchvision torchaudio pytorch-triton-rocm
 pip install torch-2.5.1*.whl torchvision-0.22.1*.whl torchaudio-2.7.1*.whl triton-3.1.0*.whl
@@ -179,10 +179,10 @@ pip install torch-2.5.1*.whl torchvision-0.22.1*.whl torchaudio-2.7.1*.whl trito
 conda create -n rocm-env-311 python=3.11 && conda activate rocm-env-311
 mkdir -p ~/rocm-wheels/311 && cd ~/rocm-wheels/311
 
-wget [https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torch-2.7.1%2Brocm7.0.2.git9015dfdf-cp311-cp311-linux_x86_64.whl](https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torch-2.7.1%2Brocm7.0.2.git9015dfdf-cp311-cp311-linux_x86_64.whl)
-wget [https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchvision-0.23.0%2Brocm7.0.2.git824e8c87-cp311-cp311-linux_x86_64.whl](https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchvision-0.23.0%2Brocm7.0.2.git824e8c87-cp311-cp311-linux_x86_64.whl)
-wget [https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchaudio-2.7.1%2Brocm7.0.2.git95c61b41-cp311-cp311-linux_x86_64.whl](https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchaudio-2.7.1%2Brocm7.0.2.git95c61b41-cp311-cp311-linux_x86_64.whl)
-wget [https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/triton-3.3.1%2Brocm7.0.2.git9c7bc0a3-cp311-cp311-linux_x86_64.whl](https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/triton-3.3.1%2Brocm7.0.2.git9c7bc0a3-cp311-cp311-linux_x86_64.whl)
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torch-2.7.1%2Brocm7.0.2.git9015dfdf-cp311-cp311-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchvision-0.23.0%2Brocm7.0.2.git824e8c87-cp311-cp311-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/torchaudio-2.7.1%2Brocm7.0.2.git95c61b41-cp311-cp311-linux_x86_64.whl
+wget https://repo.radeon.com/rocm/manylinux/rocm-rel-7.0.2/triton-3.3.1%2Brocm7.0.2.git9c7bc0a3-cp311-cp311-linux_x86_64.whl
 
 pip install torch-2.7.1*.whl torchvision-0.23.0*.whl torchaudio-2.7.1*.whl triton-3.3.1*.whl
 ```
